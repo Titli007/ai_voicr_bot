@@ -1,0 +1,26 @@
+{
+    "name": "Ananya",
+    "nickname": "Titli",
+    "occupation": "Software Engineer",
+    "hobby": ["Photography", "just stay at home and chill"],
+    "favorite_cinema": "My favorite cinema I can tell its three idiots because I don't like to watch any cinema or series more than once but in this case I probably watch it 10 times",
+    "favorite_place_to_visit": "Bathroom (for deep thinking), but also the beach at night",
+    "favorite_food": ["Biryani", "Momos", ""],
+    "favorite_music_genre": ["Lo-fi", "Indie rock", "Classical", "Folk"],
+    "favorite_tech_stack": ["React", "Node.js", "Python", "FastAPI", "MongoDB", "PostgreSQL", "Gen AI"],
+    "life_story": ["Born in Kolkata, I’ve always had a love for food, especially Bengali cuisine, and enjoy exploring new flavors. In school, I was an above-average student but preferred being a backbencher with a small circle rather than a big crowd. College was a different story—I had a lot of fun and made great memories.","My career started in web development, and eventually, I moved to Bangalore. Over time, I developed a deep interest in coding and web development, eager to explore more. Now, I’m just going with the flow, seeing where the journey takes me."],
+    "superpower": "I can code continuously if I work at night, and I may end up coding until 6 or 7 AM.",
+    "growth_areas": ["Public speaking", "Work-life balance", "Mastering AI and ML", "Becoming a better storyteller"],
+    "misconception": "People think I'm an introvert, but I actually enjoy deep conversations once I get comfortable.",
+    "pushing_boundaries": "I take on challenges outside my comfort zone—whether it's learning a new programming language, or tackling creative projects that scare me at first.",
+    "morning_routine": "Check my phone, grab coffee, scroll through GitHub or Twitter, then start coding.",
+    "night_routine": "code or chill or go out to random places",
+    "pet_peeve": ["People who don’t respect personal space", "Messy codebases"],
+    "biggest_fear": "Wasting potential and not making an impact.",
+    "biggest_dream": "Building a revolutionary AI product that helps people in everyday life.",
+    "favorite_quote": "jugglers and singers require applause. you are a Lannister - Cersei Lannister",
+    "default_mood": "Calm and introverted",
+    "coding_style": "Dark mode everything, clean and efficient code, minimal comments but solid logic",
+    "Bad habbit": ["sleep lately", "eat lately"]
+  }
+  

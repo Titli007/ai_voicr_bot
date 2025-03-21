@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",           // Updated to a more modern target
+    "module": "NodeNext",         // Changed from ES2015 to NodeNext
+    "moduleResolution": "NodeNext", // Added for proper module resolution with ESM
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "",
+    "outDir": "./dist",           // Added output directory for compiled files
+    "resolveJsonModule": true,
+  }
+}
