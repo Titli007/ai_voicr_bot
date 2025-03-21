@@ -70,13 +70,13 @@ synth.speak(utterance);
 The backend uses several API keys and environment variables:
 
 ```plaintext
-GEMINI_API_KEY=AIzaSyBQLvXNlz2R_0dnHD2Osh-7VPNh0RwVIBs
-COHERE_API_KEY=N8isCDhuYwgukwvrRWSdvpmbGgkeKbIC0GZrJ2bs
+GEMINI_API_KEY=
+COHERE_API_KEY=
 
-PINECONE_API_KEY=pcsk_2TXkHV_P78qKrVXPvwYHMhXdiKSVWxDzjdQHD9m6M8mnLEcQ4YW5NiSKiSQFPNsrLXrH5V
-PINECONE_INDEX=mynewdataindex
-PINECONE_ENVIRONMENT=us-east-1
-PINECONE_HOST=mynewdataindex-9hy5zv6.svc.aped-4627-b74a.pinecone.io
+PINECONE_API_KEY=
+PINECONE_INDEX=
+PINECONE_ENVIRONMENT=
+PINECONE_HOST=
 ```
 
 ### Data Processing Pipeline
@@ -183,7 +183,3 @@ The Web Speech API is not supported in all browsers. For best results, use:
 
 
 Firefox and some mobile browsers may have limited or no support for the speech recognition features.
-
-## Security Note
-
-The API keys included in this README should be kept secure and not committed to public repositories. In a production environment, these should be stored securely and accessed through environment variables.
