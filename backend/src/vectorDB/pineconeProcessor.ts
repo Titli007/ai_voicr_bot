@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Embeddings } from "@langchain/core/embeddings";
 import { Pinecone } from '@pinecone-database/pinecone'
 import "dotenv/config";
 
@@ -47,23 +46,3 @@ export async function searchText(humanMessage:string){
 }
 
 
-// {
-//     name: 'mynewdataindex',
-//     dimension: 1024,
-//     metric: 'cosine',
-//     host: 'mynewdataindex-9hy5zv6.svc.aped-4627-b74a.pinecone.io',
-//     deletionProtection: 'disabled',
-//     tags: undefined,
-//     embed: {
-//       model: 'multilingual-e5-large',
-//       metric: 'cosine',
-//       dimension: 1024,
-//       vectorType: 'dense',
-//       fieldMap: { text: 'chunk_text' },
-//       readParameters: { input_type: 'query', truncate: 'END' },
-//       writeParameters: { input_type: 'passage', truncate: 'END' }
-//     },
-//     spec: { pod: undefined, serverless: { cloud: 'aws', region: 'us-east-1' } },
-//     status: { ready: true, state: 'Ready' },
-//     vectorType: 'dense'
-//   }
