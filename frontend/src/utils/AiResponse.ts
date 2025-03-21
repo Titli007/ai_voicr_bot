@@ -1,8 +1,9 @@
 import axios from "axios";
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export const getAiResponse = async (humanMessage: string) => {
   try {
-    const response = await axios.post(`http://localhost:5000/api/gemini`, {
+    const response = await axios.post(`${apiUrl}/api/gemini`, {
       humanMessage, // Wrap inside an object
     });
 
