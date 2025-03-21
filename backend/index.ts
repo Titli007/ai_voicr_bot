@@ -2,8 +2,7 @@ import express, { Request, Response } from "express";
 import {getGeminiResponse} from './src/LLMProcessor.ts'
 import cors from "cors";
 import { splitData } from "./src/embeddings/textSplitter.js";
-import { getEmbeddings } from "./src/embeddings/cohereProcessor.js";
-import { searchText, storeEmbeddings, storeInVectorDb } from "./src/vectorDB/pineconeProcessor.js";
+import { searchText, storeEmbeddings } from "./src/vectorDB/pineconeProcessor.js";
 import { HumanMessage } from "@langchain/core/messages";
  
 const app = express();

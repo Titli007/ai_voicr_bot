@@ -1,5 +1,9 @@
 This repository contains a voice-based AI assistant that uses speech recognition for input and text-to-speech for responses. The application consists of a React frontend for user interaction and a backend that leverages various AI services for processing and responding to queries.
 
+## App demo video link
+
+https://drive.google.com/file/d/1Br5arurH0bYXXIDY2zXVXFr-4myQ1d-5/view?usp=drivesdk
+
 ## Frontend Setup
 
 ### Overview
