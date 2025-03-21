@@ -1,9 +1,20 @@
-import { v4 as uuidv4 } from 'uuid';
-import { Pinecone } from '@pinecone-database/pinecone'
+import { v4 as uuidv4 } from "uuid";
+import { Pinecone } from "@pinecone-database/pinecone";
 import "dotenv/config";
 
-const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY })
-const namespace = pc.index(process.env.PINECONE_INDEX, process.env.PINECONE_HOST).namespace("example-namespace");
+// Ensure all required environment variables exist
+const API_KEY = process.env.PINECONE_API_KEY;
+const INDEX_NAME = process.env.PINECONE_INDEX;
+const HOST_NAME = process.env.PINECONE_HOST;
+
+if (!API_KEY || !INDEX_NAME || !HOST_NAME) {
+  throw new Error("Missing required environment variables: PINECONE_API_KEY, PINECONE_INDEX, or PINECONE_HOST");
+}
+
+const pc = new Pinecone({ apiKey: API_KEY });
+
+const namespace = pc.index(INDEX_NAME, HOST_NAME).namespace("example-namespace");
+
 
 async function createIndex(){
     const result = await pc.createIndexForModel({

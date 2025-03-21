@@ -1,9 +1,10 @@
-import express, { Request, Response } from "express";
-import {getGeminiResponse} from './src/LLMProcessor.ts'
+import express from "express";
+import {getGeminiResponse} from './src/LLMProcessor.js'
 import cors from "cors";
 import { splitData } from "./src/embeddings/textSplitter.js";
 import { searchText, storeEmbeddings } from "./src/vectorDB/pineconeProcessor.js";
-import { HumanMessage } from "@langchain/core/messages";
+import type { Request, Response } from "express";
+
  
 const app = express();
 app.use(cors());
@@ -15,7 +16,7 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Hello, TypeScript with Express!");
 });
 
-app.post("/api/gemini", async (req: Request, res: Response) => {
+app.post("/api/gemini", async (req: any, res: any) => {
   try {
     const { humanMessage } = req.body;
 
@@ -24,11 +25,10 @@ app.post("/api/gemini", async (req: Request, res: Response) => {
     }
 
     const response = await mainProcessor(humanMessage);
-    return res.status(200).json({ success: true, data: response });
+    return res.status(200).json({ success: true, data: response }); // ✅ Correct
   } catch (error) {
     console.error("Error in /api/gemini:", error);
 
-    // Handle specific error cases
     if (error instanceof Error) {
       return res.status(500).json({ error: error.message });
     }
@@ -36,6 +36,7 @@ app.post("/api/gemini", async (req: Request, res: Response) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
 
 async function mainProcessor(humanMessage:string){
   const topVectordbResult = await searchText(humanMessage)
