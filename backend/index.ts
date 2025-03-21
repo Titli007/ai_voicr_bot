@@ -7,7 +7,17 @@ import type { Request, Response } from "express";
 
  
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://ai-voicr-bot.vercel.app",
+    "https://ai-voicr-bot-git-main-titli007s-projects.vercel.app",
+    "https://ai-voicr-nb5f7slkc-titli007s-projects.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
