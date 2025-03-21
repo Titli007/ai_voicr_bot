@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import ChatContainer from './components/chatContainer'
+import React from 'react';
+import ChatContainer from './components/ChatContainer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'linear-gradient(to bottom, #1e293b, #0f172a)',
+    }}>
       <ChatContainer />
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
